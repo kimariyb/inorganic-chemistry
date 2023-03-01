@@ -1,0 +1,195 @@
+% !TEX program = xelatex
+\documentclass[
+  10pt,
+  twoside,
+  openany,
+  b5paper, % 以上均为 ctexbook 提供的文类选项
+  colorscheme = basic, % 请根据需要选择或定制配色方案
+]{qyxf-book}
+
+\usepackage{array,tabularx}
+
+\title{无机化学绝艺总纲}
+\subtitle{The Masterpiece of Inorganic Chemistry}  % 可选
+\author{喵小决 Kimariyb}
+\typo{喵小决 Kimariyb}
+\date{2023 年 3 月 1 日}
+%\typo{AlphaGo}  % 排版人员信息，选填
+
+% 定制元信息
+\org{\Large\textit{江西理工大学}\\\textsc{Jiangxi University of Science and Technology}}
+\footorg{\textsc{Kimariyb Miao Xiao Jue}}
+\cover{\includegraphics[width=.6\textwidth]{logo.pdf}}
+\license{}  % 清空许可证信息
+
+% 调整封面标题大小
+\renewcommand{\titlefont}{\Huge\bfseries}
+\renewcommand{\subtitlefont}{\LARGE\itshape}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\chapter{原子结构与元素周期律}
+
+\section{单电子原子结构模型}
+
+\subsection{Bohr 模型}
+
+Bohr对氢原子结构提出了如下的假设。
+\begin{itemize}
+	\item \textbf{假设一} \quad 氢原子是由一个质子的原子核与一个沿着原子核、以半径为$r$的圆形轨道运动的电子构成的。
+	\item \textbf{假设二} \quad 并非所有的圆形轨道均为电子所允许的，只有电子的轨道角动量满足特定值时，才是电子运动所允许的轨道。
+	\item \textbf{假设三} \quad 在一定的轨道所允许的圆形轨道上的电子所具有的能量是固定的，这些值是不连续的。
+	\begin{equation*}
+		E = -13.6 \times \frac{1}{n^2}(\mathrm{eV})
+	\end{equation*}
+	\item \textbf{假设四} \quad 电子从一个允许圆形轨道向另一个允许圆形轨道跃迁时，放出的能量必须等于两个轨道之间的能量差。
+	\begin{equation*}
+		\Delta E = h\nu = \frac{hc}{\lambda}
+	\end{equation*}
+\end{itemize}
+
+\subsection{波粒二象性与不确定性原理}
+
+de Broglie 波粒二象性定理：
+\begin{equation*}
+	\lambda = \frac{h}{p} = \frac{h}{m\nu}
+\end{equation*}
+
+Heisenberg 不确定原理：同时准确地测定微观粒子的动量和位置是不可能的。
+\begin{equation*}
+	\Delta x \cdot \Delta p \geqslant \frac{h}{4\pi}
+\end{equation*}
+
+\subsection{量子力学与原子轨道}
+Schrodinger方程的形式为：
+\begin{equation*}
+	\nabla^2\psi + \frac{8\pi ^2m}{h^2}(E-V)\psi=0  
+\end{equation*}
+其中，$\psi$为电子的波函数，$|\psi|$代表波函数的振幅，$\psi^2$为波函数的概率密度。
+
+Schrodinger方程求解时，与一些量子数有关，这些量子数分别为主量子数$n$，角量子数$l$，磁量子数$m$。
+
+（1）主量子数$n$ \quad 表示电子出现几率最大区域的离核远近程度和电子的能力高低。$n$越大，表示电子能级或主能级层的能量越大，也表示电子离核的平均距离越大，$n$的取值为正整数$1,\ 2,\ 3,\ \cdots $。其光谱项符号的含义为：
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{ccccccc}
+		\toprule
+		\qquad $n$ \qquad &\qquad 1\qquad &\qquad 2\qquad &\qquad 3\qquad &\qquad 4\qquad &\qquad 5\qquad &\qquad $\cdots$ \qquad \\
+		\midrule
+		\qquad Symbol \qquad & \qquad K \qquad & \qquad L \qquad & \qquad M \qquad & \qquad N \qquad &\qquad O \qquad & \qquad $\cdots$ \qquad \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+（2）角量子数$l$ \quad 表示电子在空间的角度分布情况，即电子在空间运动的形式。其值可取$0,\ 1,\ 3,\ \cdots,\ (n-1)$，共$n$个数值。其符号含义为：
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{ccccccc}
+		\toprule
+		\qquad $n$ \qquad &\qquad 0\qquad &\qquad 1\qquad &\qquad 2\qquad &\qquad 3\qquad &\qquad 4\qquad &\qquad $\cdots$ \qquad \\
+		\midrule
+		\qquad Symbol \qquad & \qquad s \qquad & \qquad p \qquad & \qquad d \qquad & \qquad f \qquad &\qquad g \qquad & \qquad $\cdots$ \qquad \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+（3）磁量子数$m$ \quad 表示原子轨道在空间的不同取向。其值可取$0$, $\pm 1$, $\pm 2$, $\pm 3$,$\cdots$, $\pm l$，共$(2l+1)$个数值。需要注意的是$\mathrm{p_z}$轨道和$\mathrm{d_{z^2}}$轨道的磁量子数规定为0。
+
+（4）自旋量子数$m_s$ \quad 以上三个量子数是配合波动方程解出的。自旋量子数是人们自己定义的，其表示电子有两种状态不同的自旋角动量，可取$+1/2$或$-1/2$。
+
+以上四种量子数，可规定原子中每个电子的运动状态。
+
+\section{多电子原子结构}
+
+\subsection{多电子原子的能级}
+
+Pauling指出在氢原子中原子轨道能量只与$n$有关，而在多电子原子中，轨道能量与$n$和$l$都有关。Pauling能级图表明：角量子数$l$相同的能级其能量由主量子数$n$决定，例如：
+\begin{equation*}
+	E_\mathrm{1s} < E_\mathrm{2s} < E_\mathrm{3s} < E_\mathrm{4s}
+\end{equation*}
+但主量子数$n$相同、角量子数$l$不同的能级，能量随$l$的增大而升高，例如：
+\begin{equation*}
+	E_{n\mathrm{s}} < E_{n\mathrm{p}} < E_{n\mathrm{d}} < E_{n\mathrm{f}}
+\end{equation*}
+此现象称为能级分裂，当但主量子数$n$、角量子数$l$均不相同的时，还会出现能级交错的现象，例如：
+\begin{equation*}
+	E_\mathrm{4s} < E_\mathrm{3d} < E_\mathrm{4p} 
+\end{equation*}
+需要注意的是，Pauling能级图是用来判断电子填充顺序的能级图。，而如果想判断电子离开顺序，则需要使用到Cotton能级图，Cotton能级图中有一个需要注意的点，并不是所有元素的3d轨道能量都高于4s。
+\begin{itemize}
+	\item 当$Z = 1 \sim 14$时，$E_\mathrm{4s}>E_\mathrm{3d}$；
+	\item 当$Z = 15 \sim 20$时，$E_\mathrm{3d}>E_\mathrm{4s}$；
+	\item 当$Z > 21$时，$E_\mathrm{4s}>E_\mathrm{3d}$。
+\end{itemize}
+
+\subsection{屏蔽效应}
+当考虑其他电子排斥作用时，其他电子的排斥作用相当于部分抵消了原子核对电子的吸引，其他$Z-1$个电子的电子云分散在核周围，像一个罩子屏蔽了部分原子核的正电荷，这时候电子所受到的有效核电荷数$Z^\ast $就小于理论上的核电荷数$Z$，这就是屏蔽效应。
+\begin{equation*}
+	E_i = -\frac{(Z^\ast_{i})^2}{n^2} \times 13.6 \ (\mathrm{eV})
+\end{equation*}
+可以使用Slater规则来计算这个有效核电荷数，该规则叙述如下：
+
+（1）原子中的电子分在若干个组中：(1s)，(2s，3p)，(3s，3p)，(3d)，(4s，4p)，(4d)，(4f)等，每个圆括号就是一个轨道组。
+
+（2）一个轨道组外面的轨道组上的电子对内轨道组上的屏蔽系数$\sigma=0$，这说明屏蔽作用仅发生在内层电子对外层电子或同层电子之间。
+
+（3）同一轨道组内电子屏蔽系数$\sigma = 0.35$，1s轨道上的两个电子之间的屏蔽系数$\sigma=0.3$。
+
+（4）被屏蔽电子为$n\mathrm{s}$或$n\mathrm{p}$轨道组上的电子时，主量子数为$(n-1)$的各轨道组上的电子，对$n\mathrm{s}$或$n\mathrm{p}$上的电子的屏蔽系数为$\sigma=0.85$，而小于$(n-1)$的各轨道组上的电子，对其屏蔽系数为$\sigma=1.00$。
+
+（5）被屏蔽电子为$n\mathrm{d}$或$n\mathrm{f}$轨道组上的电子时，则位于它左边各轨道组上的电子，对$n\mathrm{d}$或$n\mathrm{f}$轨道组上电子的屏蔽系数为$\sigma=1.00$。
+
+\subsection{钻穿效应}
+钻穿效应是指$n$相同、$l$不同的轨道，由于电子云径向分布不妨同，电子云穿过内层钻穿到核附近回避其他电子的能力不同，从而使其能量不同的现象。
+
+当主量子数相同时，角量子数越大，钻穿效应越小，屏蔽效应越大，其能量也越高 。如钻穿效应$\mathrm{3s}>\mathrm{3p}>\mathrm{3d}$。钻穿回避电子的能力一般是：
+\begin{equation*}
+	n\mathrm{s} > n\mathrm{p} > n\mathrm{d} > n\mathrm{f}
+\end{equation*}
+
+
+\subsection{核外电子的排布规律}
+
+（1）构造原理，从氢原子开始，核外每增加一个电子，就按照Pauling能级图的顺序填充原子轨道。
+
+（2）能量最低原理，电子应该首先充满量子数$n$，$l$最小值的原子轨道。
+
+（3）Pauli不相容原理，同一个原子轨道上，只能容纳自旋相反的两个电子。
+
+（4）Hund规则，在填充能量相同的各个轨道时，电子总是以自旋平行的方式，单独地占有各个轨道。能量相同的轨道组处于半充满或全充满时，体系的能量最低。
+
+\section{元素周期律}
+
+\subsection{原子半径}
+原子半径在周期和族中的变化规律如下：
+
+（1）在短周期中，原子半径从左到右逐渐缩小，稀有气体突然增大。其原因是从左到右电子都增加到同一外层中，电子在同一层内的相互屏蔽作用是比较小的，所以随着原子序数的增大，核电荷对电子的吸引力增强，导致原子收缩。
+
+（2） 在长周期中，从左到右，电子逐一填入$(n-1)$d层，d电子处于次外层对核的屏蔽作用比较大，所以随着核电荷的增加，半径减少的幅度不如主族元素这么大，并且还有半径增加的情况。所谓的镧系收缩，就是指镧系的15种元素随着原子序数的增加，原子半径收缩的总效果。其导致了Zr、Hf，Ta、Nb，Mo、W三对原子的原子半径化学性质相似；使铂系元素（Ru，Rh，Pd，Os，Ir，Pt）性质上极为相似。使其分离极为困难。
+	
+（3）在同一主族中由上到下，原子半径一般都是增大的。这是因为同族原子由上而下电子层数增多，虽然核电荷数由上而下也增大，但由于内层电子的屏蔽，有效核电荷数增加使半径缩小的作用不如因电子层数增加而使半径增大所引起的作用大，总的效果是增大的。副族元素增大的幅度较小，特别是第五和第六周期的元素，其由于镧系收缩，其原子半径十分接近。
+
+\subsection{电离能}
+
+基态的气体原子失去最外层的第一个电子成为气体的$+1$价离子所需的能量叫第一电离能$I_1$，第一电离能的数值最小。
+
+（1）同一主族的元素从上到下，第一电离能依次降低，导致元素的金属性增加。因此IA族的Cs元素第一电离能最小，稀有气体He元素的第一电离能最大。副族的电离能变化的幅度较小。
+
+（2）同一周期从左到右，第一电离能在总趋势上依次增大，增大的幅度随周期数的增大而减小。但要注意B、Be，O、N的第一电离能是特例，这是由电子构型决定的。一般来说具有$\mathrm{p^3}$，$\mathrm{d^5}$，$\mathrm{f^7}$等半充满电子构型的元素都有较大的电离能。同一周期过渡元素和内过渡元素变化没有规律。
+
+\subsection{电子亲合能}
+一个气态的基态原子得到一个电子形成气态基态负离子时，所产生的能量变化，称为该元素的第一电子亲合能$A_1$。第一电子亲合能有正有负，但第二电子亲合能都是正值。
+
+（1）同一主族从上到下，一般来说电子亲和能变小，这是因为随原子半径增大，核电荷对外来电子的吸引力减小所致。当原子半径太小时，第一电子亲合能反而小，例如F，所以第一电子亲合能最大的元素是Cl。同一副族从上到下，第一电子亲和能大体上是增加的。
+
+（2）同一周期从左到右，第一电子亲和能在总趋势上是增大的，但当中性原子具有稳定的半充满或全充满的电子构型时，该元素的第一电子亲合能都明显变小。
+
+\subsection{电负性}
+
+电负性反应了两个原子形成共价键时原子吸引成键电子对的能力。Pauling电负性是比较常用的，人为规定F的电负性为4.00。
+\chapter{化学键和分子、晶体结构}
+\end{document}
